@@ -22,34 +22,36 @@ public class Exception_1 {
         Scanner tc;
 
         double di = 0.0;
-        double div = 0.0;
-        double divi = 0.0;
+        double dividendo = 0.0;
+        double divisor = 0.0;
 
         try {
             do {
                 tc = new Scanner(System.in);
                 try {
                     System.out.print("Digite el dividendo ");
-                    div = tc.nextDouble();
+                    dividendo = tc.nextDouble();
                 } catch (InputMismatchException ex) {
                     System.out.println("No se puede digitar letras");
-                    div = -1;
+                    dividendo = -1;
                 }
-            } while (div < 0);
-
+            } while (dividendo < 0);
+            System.out.println("=======");
             do {
                 tc = new Scanner(System.in);
 
                 try {
                     System.out.print("Digite el divisor ");
-                    divi = tc.nextDouble();
+                    divisor = tc.nextDouble();
                 } catch (InputMismatchException ex) {
                     System.out.println("No se puede digitar letras");
-                    divi = -1;
-                }
-            } while (divi < 0);
 
-            di = div / divi;
+                    divisor = -1;
+                }
+
+            } while (divisor < 0);
+
+            di = dividendo / divisor;
             System.out.println("el resultado es: " + di);
         } catch (Exception ex) {
             System.out.println("Error");
